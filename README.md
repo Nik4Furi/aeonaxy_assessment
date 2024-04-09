@@ -28,9 +28,9 @@ This is focused to create the frontend and backend architecture shich is matched
 ## <h2 id="steps" >Quick Steps </h2>
 
 
-<a href="http://" target="blank" rel="noopener noreferrer">Demo Video</a>
-<a href="http://" target="blank" rel="noopener noreferrer">Live Frontend Url</a>
-<a href="https://heliverse-assessment-api.onrender.com" target="blank" rel="noopener noreferrer">Live Backend Url</a>
+<a href="https://drive.google.com/file/d/19UFYNKZMVjT1RFS9sToxfKGb7ZxgDmnj/view?usp=sharing" target="blank" rel="noopener noreferrer">Demo Video</a>
+<a href="https://aeonaxy-assessment.vercel.app/login" target="blank" rel="noopener noreferrer">Live Frontend Url</a>
+<a href="https://aeonaxy-assessment.onrender.com" target="blank" rel="noopener noreferrer">Live Backend Url</a>
 <a href="https://aeonaxy.notion.site/Full-Stack-Developer-Project-4584980444d947a8a7acdc7f58774425" target="blank" rel="noopener noreferrer">Assessment</a>
  
 <a href="#aeonaxy_assessment">Go Home </a>
