@@ -6,7 +6,6 @@ This is focused to create the frontend and backend architecture shich is matched
 ## Indexing the contents
 ####   <p><a href="#badges" >Badges</a></p>
 ####   <p><a href="#steps" >Quick Steps</a></p>
-####   <p><a href="#looks" >aeonaxy_assessment look like</a></p>
 ####   <p><a href="#demo" >Demo</a></p>
 ####   <p><a href="#stack" >Tech Stack</a></p>
 ####   <p><a href="#runLocally" >Run Locally</a></p>
@@ -29,28 +28,20 @@ This is focused to create the frontend and backend architecture shich is matched
 
 
 <a href="https://drive.google.com/file/d/19UFYNKZMVjT1RFS9sToxfKGb7ZxgDmnj/view?usp=sharing" target="blank" rel="noopener noreferrer">Demo Video</a>
+
 <a href="https://aeonaxy-assessment.vercel.app/login" target="blank" rel="noopener noreferrer">Live Frontend Url</a>
+
 <a href="https://aeonaxy-assessment.onrender.com" target="blank" rel="noopener noreferrer">Live Backend Url</a>
+
 <a href="https://aeonaxy.notion.site/Full-Stack-Developer-Project-4584980444d947a8a7acdc7f58774425" target="blank" rel="noopener noreferrer">Assessment</a>
  
 <a href="#aeonaxy_assessment">Go Home </a>
-
-## <h2 id="demo" >Demo </h2>
-
-<p text-align=left>
-  <img src="https://user-images.githubusercontent.com/91304976/203494510-77735dad-2653-4835-8d86-8915b384abeb.gif" width="500" height="" alt="aeonaxy_assessment_home"/>
-    
-    
-  <img src="https://user-images.githubusercontent.com/91304976/203494536-92cc8b0e-1189-4e22-b6c0-81c07418cfcc.gif" width="500" height="" alt="aeonaxy_assessment_download"/>  
-</p>
- 
-<a href="#aeonaxy_assessment">Go Home </a>
-
 
 
 ## <h2 id="stack" >Tech Stack </h2>
 
 **Client:** React, Tailwind CSS (UI Library)
+
 **Server:** NodeJS, ExpressJS, MongoDB
 
 <a href="#aeonaxy_assessment">Go Home </a>
