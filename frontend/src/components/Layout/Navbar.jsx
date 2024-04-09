@@ -2,14 +2,18 @@ import React, { useState } from 'react'
 import { LinkButton } from './Button';
 
 import {Link,useNavigate} from 'react-router-dom'
+import { handleUserLogout } from '../../functionsAPIs';
 
 const Navbar = () => {
 
     const [dropDown, setDropDown] = useState(false);
     const navigate = useNavigate();
 
+const User = JSON.parse(localStorage?.getItem('user'));
+
+
     const handleLogout = ()=>{
-        console.log('logout');
+        handleUserLogout();
 
         navigate('/login');
     }
@@ -31,11 +35,11 @@ const Navbar = () => {
 
                         <div className="flex items-center cursor-pointer " onMouseEnter={() => setDropDown(true)} onMouseLeave={() => setDropDown(false)} >
                             <img
-                                src={ "./images/pic.jpg"}
+                                src={ User?.avatar ? User?.avatar : 'https://via.placeholder.com/50'}
                                 alt="Admin Avatar"
                                 className="w-8 h-8 rounded-full mr-2"
                             />
-                            <span className="text-highlight capitalize">{"John"}</span>
+                            <span className="text-highlight capitalize">{User?.name ? User?.name : "User"}</span>
                         </div>
                         {dropDown &&
                             <div className="relative" onMouseEnter={() => setDropDown(true)} onMouseLeave={() => setDropDown(false)}>

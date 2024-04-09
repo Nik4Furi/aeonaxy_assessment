@@ -5,7 +5,7 @@ const HomeCard = ({ title, description, img }) => {
 
   return (
     <div
-      className={`w-[40%] rounded overflow-hidden border shadow-lg ${isHovered && 'border-primary'  } cursor-pointer`}
+      className={`w-[40%] rounded overflow-hidden border shadow-lg ${isHovered && 'border-primary'  } cursor-pointer `}
       onClick={() => setIsHovered(!isHovered)}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}

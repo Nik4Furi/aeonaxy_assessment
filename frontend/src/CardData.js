@@ -6,8 +6,8 @@ const CardData = [
         description:'I am freelancer, or graphic designer to sell or upload my designs publically'
     },
     {
-        img:'./images/service-4.jpg',
-        title:"I'm looking to hire designer",
+        img:'./images/service-2.jpg',
+        title:"I'm looking to hire designer/freelancer",
         description:'Can recurite according to your needs and constratints help of filters'
     },
     {

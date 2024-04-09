@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Loading = ({ w = '4',h='4' }) => {
+const Loading = ({ w = '12', h = '12' }) => {
     return (
         <>
-            <div className="flex justify-center items-center">
-                <div className={`animate-spin rounded-full h-${h} w-${w} border-t-2 border-b-2 border-indigo-500`}> </div>
+            <div className="flex justify-center items-center ">
+                <div className={`border border-t-4 border-gray-900 rounded-full w-${w} h-${h} animate-spin`}></div>
             </div>
         </>
     )

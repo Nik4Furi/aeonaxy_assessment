@@ -1,21 +1,41 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link,useNavigate } from 'react-router-dom'
 
 import Button from '../components/Layout/Button';
 import FormInputBox from '../components/Layout/FormInputBox';
+import { handleLoginUser } from '../functionsAPIs';
+
+import toast from 'react-hot-toast'
+import Loading from '../components/Layout/Loading';
 
 const Login = () => {
 
     const [form, setForm] = useState({ email: '', password: '' });
     const [loading,setLoading] = useState(false);
 
+    const navigate = useNavigate();
+
     const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value })
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async(e) => {
         e.preventDefault();
         setLoading(true);
 
-        console.log(form);
+        const data = await handleLoginUser(form);
+
+        if(data?.success === false){
+            toast.error(data?.msg);
+            setLoading(false);
+            return;
+        }
+
+        toast.success(data?.msg);
+        localStorage.setItem('token',data?.token);
+        const user = JSON.stringify(data?.users);
+        localStorage.setItem('user',user);
+        localStorage.setItem('isAuthenticated',true);
+
+        navigate(-1);
 
         setLoading(false);
         setForm({email:'',password:''})
@@ -23,6 +43,7 @@ const Login = () => {
 
     return (
         <>
+
             <main id="Login">
                 <section className="mx-auto w-[100%] md:w-[80%] my-6 p-4">
 
@@ -61,7 +82,6 @@ const Login = () => {
                                     </form>
                                 </div>
                             </div>
-
 
 
 

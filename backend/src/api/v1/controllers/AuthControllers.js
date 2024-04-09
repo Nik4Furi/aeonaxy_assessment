@@ -19,7 +19,6 @@ function UsersControllers() {
 
         // Register the users, using POST '/api/user/register'
         async Register(req, res) {
-
             try {
                 //--------- Req.body content
                 const { name, username, email, password, cpassword } = req.body;
@@ -40,22 +39,24 @@ function UsersControllers() {
                 //Upload profile pictures
                 const file = req.file;
 
+                if(!file)
+                    return res.status(404).json({success:false,msg:"File not found"})
+
                 const fileUri = await getDataUri(file);
 
                 const myCloud = await cloudinary.v2.uploader.upload(fileUri.content);
 
                 //Converting the password into hash
-                const hashPassword = await bcrypt.hash(password, 10);
+                const hashPassword = await bcrypt.hash(password, 10)    
 
                 //Register the users
-                users = await UsersModel({
+                users = await UsersModel.create({
                     name,
                     email,
                     password: hashPassword,
                     avatar: myCloud?.secure_url,
                     username
                 })
-                await users.save();
 
                 //--------- Send Mail------------
                 const homePage = process.env.FRONTEND_URL;

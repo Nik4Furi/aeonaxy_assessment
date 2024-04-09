@@ -2,7 +2,8 @@ import React from 'react'
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
-import Toaster from 'react-hot-toast'
+import { Toaster } from 'react-hot-toast'
+
 
 //Pages
 import Home from './pages/Home'
@@ -19,7 +20,7 @@ function App() {
 
         <Routes >
           {/* Home/Secret Page  */}
-          <Route path='/' element={<Layout> <Home /> </Layout> } ></Route>
+          <Route path='/' element={<Layout> <Home /> </Layout>} ></Route>
 
           {/* Verify/User Page  */}
           <Route path='/verifyUser' element={<Layout> <VerifyUser /></Layout>} ></Route>
@@ -33,6 +34,7 @@ function App() {
         </Routes>
 
         <Toaster />
+
       </BrowserRouter>
     </>
   )
